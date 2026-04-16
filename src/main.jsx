@@ -8,6 +8,8 @@ import { RouterProvider } from "react-router/dom"
 import { router } from './router/Router'
 import Footer from './components/Footer'
 
+
+
 createRoot(document.getElementById('root')).render(
   <StrictMode>
   <ToastContainer />
