@@ -4,6 +4,7 @@ import Rootlayout from "../ulLayouts/Rootlayout";
 import Homepage from "../ulLayouts/Homepage";
 import Stats from "../ulLayouts/Stats";
 import Timeline from "../ulLayouts/Timeline";
+import Error from "../components/Error";
 
 
 export const router = createBrowserRouter([
@@ -25,7 +26,7 @@ export const router = createBrowserRouter([
             element: <Stats></Stats>
         }
     ],
-    errorElement: <h2>error</h2>
+    errorElement: <Error></Error>
 
   },
 ]);
