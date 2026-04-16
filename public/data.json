@@ -78,14 +78,14 @@
     "email": "imran.hossain@gmail.com",
     "days_since_contact": 16,
     "status": "overdue",
-    "tags": ["university", "project partner"],
+    "tags": ["university", "partner"],
     "bio": "Worked together on final year project. Now pursuing a master's degree abroad.",
     "goal": 14,
     "next_due_date": "2026-04-14"
   },
   {
     "id": 8,
-    "name": "Maliha Chowdhury",
+    "name": "Maliha Sama",
     "picture": "https://randomuser.me/api/portraits/women/88.jpg",
     "email": "maliha.chowdhury@gmail.com",
     "days_since_contact": 12,

@@ -1,23 +1,34 @@
 import React, { useState, useEffect } from 'react';
-import FriendCard from '../Ui/FriendCard';// কার্ডটি ইম্পোর্ট করুন
+import FriendCard from '../Ui/FriendCard';
 
 const Cartfetching = () => {
     const [datas, setDatas] = useState([]);
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        fetch('/data.json') 
-            .then(res => res.json())
-            .then(data => {
-                setDatas(data);
-                setLoading(false);
-            })
-            .catch(err => {
-                console.error(err);
-                setLoading(false);
-            });
-    }, []);
+        setLoading(true);
+        
+        const timer = setTimeout(() => {
+            fetch('/data.json') 
+                .then(res => {
+                    if (!res.ok) throw new Error("Failed to fetch");
+                    return res.json();
+                })
+                .then(data => {
+                    setDatas(data);
+                    setLoading(false);
+                })
+                .catch(err => {
+                    console.error(err);
+                    setLoading(false);
+                });
+        }, 100); 
 
+    
+        return () => clearTimeout(timer);
+    }, []); 
+
+  
     if (loading) {
         return (
             <div className="flex justify-center items-center py-20">
