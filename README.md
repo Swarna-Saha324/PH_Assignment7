@@ -65,7 +65,7 @@ You can:
 git clone https://github.com/Swarna-Saha324/PH_Assignment7.git
 
 # Navigate into the project
-cd relate-friendship-manager
+cd PH_Assignment7
 
 # Install dependencies
 npm install
