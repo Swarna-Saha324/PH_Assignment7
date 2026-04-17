@@ -1,16 +1,74 @@
-# React + Vite
+# 🤝 Relate: Friendship Management System
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Relate** is a modern web application designed to help you maintain meaningful connections with your friends. It tracks your last interaction and reminds you when it's time to reconnect—so your relationships never fade away.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Description
 
-## React Compiler
+In today’s busy life, we often forget to stay in touch with the people who matter most. **Relate** solves this problem by helping you manage and nurture your friendships.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+You can:
+- View friend profiles
+- Set communication goals
+- Track interactions in a timeline
+- Analyze communication habits (Call/Text/Video)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠 Technologies Used
+
+- **Frontend:** React.js (Vite)
+- **Styling:** Tailwind CSS
+- **Icons:** React Icons & Custom PNG Icons
+- **Charts:** Recharts
+- **State Management:** React Context API
+- **Routing:** React Router DOM (v7)
+- **Notifications:** React Toastify
+
+---
+
+## ✨ Features
+
+- 👤 **Personalized Profiles** – Bio, status, and tags for each friend  
+- ⚡ **Quick Check-In** – Add call, text, or video interactions instantly  
+- 📅 **Smart Timeline** – Automatically sorted interaction history  
+- 📊 **Interactive Analytics** – Donut charts for communication insights  
+- ✅ **Data Validation** – Prevents duplicate interaction entries  
+- 🔍 **Timeline Filtering** – Filter by Call, Text, or Video  
+- 💤 **Snooze & Archive** – Manage inactive connections  
+- 📱 **Fully Responsive** – Works on all devices  
+
+---
+
+## 📸 Screenshots
+
+### 🏠 Home / Profile
+![Home](https://i.ibb.co/HfGdNnxW/Screenshot-2026-04-17-113204.png)
+
+### 📊 Banner
+![Analytics](https://i.ibb.co/dsTm0Z3x/Screenshot-2026-04-17-113355.png)
+
+### 🕒 Footer
+![Timeline](https://i.ibb.co/MddxQRV/Screenshot-2026-04-17-113507.png)
+
+### ⚙️ Timeline
+![Features](https://i.ibb.co/d4pfBQyD/Screenshot-2026-04-17-113650.png)
+
+### 📱 Stastics
+![Responsive](https://i.ibb.co/bgt2Fv5F/Screenshot-2026-04-17-113751.png)
+
+## ⚙️ Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/Swarna-Saha324/PH_Assignment7.git
+
+# Navigate into the project
+cd relate-friendship-manager
+
+# Install dependencies
+npm install
+
+# Run the development server
+npm run dev```
