@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router';
 import { FaBell, FaArchive, FaTrashAlt, FaPhoneAlt, FaCommentDots, FaVideo } from 'react-icons/fa';
+import { useFriend } from '../context/FriendContext'; 
 
 const FriendDetails = () => {
     const { id } = useParams();
+    const { addInteraction } = useFriend(); 
     const [friend, setFriend] = useState(null);
 
     useEffect(() => {
@@ -95,20 +97,38 @@ const FriendDetails = () => {
                     {/* 3. Quick Check-In Section */}
                     <div className="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm">
                         <h3 className="text-[#1a3d37] font-bold text-lg mb-6">Quick Check-In</h3>
-                        <div className="grid grid-cols-3 gap-4">
-                            <button className="flex flex-col items-center justify-center gap-3 p-8 bg-[#f8f9fa] rounded-2xl hover:bg-gray-100 transition-colors">
-                                <FaPhoneAlt size={22} className="text-gray-700" />
-                                <span className="text-sm font-bold text-gray-700">Call</span>
-                            </button>
-                            <button className="flex flex-col items-center justify-center gap-3 p-8 bg-[#f8f9fa] rounded-2xl hover:bg-gray-100 transition-colors">
-                                <FaCommentDots size={24} className="text-gray-700" />
-                                <span className="text-sm font-bold text-gray-700">Text</span>
-                            </button>
-                            <button className="flex flex-col items-center justify-center gap-3 p-8 bg-[#f8f9fa] rounded-2xl hover:bg-gray-100 transition-colors">
-                                <FaVideo size={22} className="text-gray-700" />
-                                <span className="text-sm font-bold text-gray-700">Video</span>
-                            </button>
-                        </div>
+                        {/* 3. Quick Check-In Section */}
+<div className="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm">
+    <h3 className="text-[#1a3d37] font-bold text-lg mb-6">Quick Check-In</h3>
+    <div className="grid grid-cols-3 gap-4">
+        {/* Call Button */}
+        <button 
+            onClick={() => addInteraction(friend, 'Call')}
+            className="flex flex-col items-center justify-center gap-3 p-8 bg-[#f8f9fa] rounded-2xl hover:bg-gray-100 transition-colors"
+        >
+            <FaPhoneAlt size={22} className="text-gray-700" />
+            <span className="text-sm font-bold text-gray-700">Call</span>
+        </button>
+
+        {/* Text Button */}
+        <button 
+            onClick={() => addInteraction(friend, 'Text')}
+            className="flex flex-col items-center justify-center gap-3 p-8 bg-[#f8f9fa] rounded-2xl hover:bg-gray-100 transition-colors"
+        >
+            <FaCommentDots size={24} className="text-gray-700" />
+            <span className="text-sm font-bold text-gray-700">Text</span>
+        </button>
+
+        {/* Video Button */}
+        <button 
+            onClick={() => addInteraction(friend, 'Video')}
+            className="flex flex-col items-center justify-center gap-3 p-8 bg-[#f8f9fa] rounded-2xl hover:bg-gray-100 transition-colors"
+        >
+            <FaVideo size={22} className="text-gray-700" />
+            <span className="text-sm font-bold text-gray-700">Video</span>
+        </button>
+    </div>
+</div>
                     </div>
 
                 </div>

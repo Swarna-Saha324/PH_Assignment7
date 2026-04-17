@@ -6,8 +6,7 @@ const Cartfetching = () => {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        setLoading(true);
-        
+       
         const timer = setTimeout(() => {
             fetch('/data.json') 
                 .then(res => {
@@ -22,7 +21,7 @@ const Cartfetching = () => {
                     console.error(err);
                     setLoading(false);
                 });
-        }, 100); 
+        }, 3000); 
 
     
         return () => clearTimeout(timer);

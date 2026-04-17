@@ -7,12 +7,15 @@ import {  Outlet } from "react-router";
 import { RouterProvider } from "react-router/dom"
 import { router } from './router/Router'
 import Footer from './components/Footer'
+import { FriendProvider } from './context/FriendContext';
 
 
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-  <ToastContainer />
-   <RouterProvider router={router} />,
+    <FriendProvider>
+      <ToastContainer />
+      <RouterProvider router={router} />
+    </FriendProvider>
   </StrictMode>,
 )
